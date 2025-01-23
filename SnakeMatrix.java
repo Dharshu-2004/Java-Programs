@@ -1,35 +1,45 @@
-import java.util.Scanner;
-public class SnakeMatrix{
-    public static void main (String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int rows=3;int cols=3;
-        System.out.println("Enter the elements for the 3X3 matris:");
-        int[][] mat=new int[rows][cols];
-        for(int i=0;i<rows;i++){
-            for(int j=0;j<cols;j++){
-                mat[i][j]=sc.nextInt();
-            }
-        }
-        System.out.println("Original Matrix:");
-        for(int i=0;i<rows;i++){
-            for(int j=0;j<cols;j++){
-                System.out.print(mat[i][j]+ " ");
-            }
-            System.out.println();
-        }
-        System.out.println("Snake Pattern of Matrix is; ");
-        for(int i=0;i<mat.length;i++){
-            if(i%2==0){
-                for(int j=0;j<mat[0].length;j++){
-                    System.out.print(mat[i][j]+" ");
-                }
-            }
-            else{
-                for(int j=mat[0].length-1;j>=0;j--){
-                    System.out.print(mat[i][j]+" ");
-                }
-            }
-            System.out.println();
-        }
-    }
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class SnakeMatrix
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=3;
+		int arr[][]=new int[n][n];
+		for(int i=0;i<n;i++){
+		    for(int j=0;j<n;j++){
+		        arr[i][j]=sc.nextInt();
+		    }
+		}
+		System.out.println("Entered Array: ");
+		for(int i=0;i<n;i++){
+		    for(int j=0;j<n;j++){
+		        System.out.print(arr[i][j]);
+		    }System.out.println();
+		}
+			System.out.println("Snake Array: ");
+		for(int i=0;i<n;i++){
+		    if(i%2==0)
+		    {
+		      for(int j=0;j<n;j++){
+		           System.out.print(arr[i][j]+" ");
+		      }      
+		    }
+		    else
+		    {
+		      for(int j=n-1;j>=0;j-- ){
+		           System.out.print(arr[i][j]+" ");
+		      }
+		    }
+		    System.out.println();
+		    
+		}
+		
+	}
 }
